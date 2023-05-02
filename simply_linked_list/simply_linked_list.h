@@ -21,7 +21,8 @@ typedef struct	list {
  * -Return NULL and perror if they are some issues
  * -Return ptr to the element was created is everything is ok
 */
-s_list	*s_list_create(void *data);
+s_list	*
+s_list_create(void *data);
 
 //--Addlast func--//
 /*
@@ -30,7 +31,8 @@ s_list	*s_list_create(void *data);
  * Return NULL and print on stderr if they are some issues
  * Return ptr to the last element if everything is ok
 */
-s_list	*s_list_addlast(s_list *list, void *data);
+s_list	*
+s_list_addlast(s_list *list, void *data);
 
 //--Addfront func--//
 /*
@@ -42,7 +44,8 @@ s_list	*s_list_addlast(s_list *list, void *data);
  * Return NULL and print on stderr if they are an issues
  * Return ptr to the new first element of the list if its ok
 */
-s_list	*s_list_addfront(s_list *list, void *data);
+s_list	*
+s_list_addfront(s_list *list, void *data);
 
 //--Golast func--//
 /*
@@ -51,7 +54,8 @@ s_list	*s_list_addfront(s_list *list, void *data);
  * Return NULL and print on stderr if they are some issues
  * Return ptr on the last element if everything is ok
 */
-s_list	*s_list_golast(s_list *list);
+s_list	*
+s_list_golast(s_list *list);
 
 //--Size func--//
 /*
@@ -61,5 +65,6 @@ s_list	*s_list_golast(s_list *list);
  * Return -1 and printf on stderr if they are an issue
  * Return the size if everthing is ok
 */
-int	s_list_size(s_list *list);
+int	
+s_list_size(s_list *list);
 #endif
