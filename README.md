@@ -6,4 +6,6 @@ Implemented data structure:
 Simply linked list and this utilities:
 -Create
 -Addlast
+-Addfront   
 -Golast
+-Size
