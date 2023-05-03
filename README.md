@@ -8,5 +8,6 @@ Simply linked list and this utilities:
 -Create
 -Addlast
 -Addfront
+-Insert
 -Golast
 -Size

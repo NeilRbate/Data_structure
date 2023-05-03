@@ -32,7 +32,7 @@ s_list_create(void *data);
  * Return ptr to the last element if everything is ok
 */
 s_list	*
-s_list_addlast(s_list *list, void *data);
+s_list_addlast(s_list *current, void *data);
 
 //--Addfront func--//
 /*
@@ -45,7 +45,7 @@ s_list_addlast(s_list *list, void *data);
  * Return ptr to the new first element of the list if its ok
 */
 s_list	*
-s_list_addfront(s_list *list, void *data);
+s_list_addfront(s_list *current, void *data);
 
 //--Golast func--//
 /*
@@ -55,7 +55,7 @@ s_list_addfront(s_list *list, void *data);
  * Return ptr on the last element if everything is ok
 */
 s_list	*
-s_list_golast(s_list *list);
+s_list_golast(s_list *current);
 
 //--Size func--//
 /*
@@ -66,5 +66,17 @@ s_list_golast(s_list *list);
  * Return the size if everthing is ok
 */
 int	
-s_list_size(s_list *list);
+s_list_size(s_list *current);
+
+//--Insert func--//
+/*
+ * Dependencies : stdio
+ * This function insert a new node after the current node
+ * Return NULL if the current or new node is NULL
+ * Return ptr to the current node if everything is ok
+*/
+s_list	*
+s_list_insert(s_list *current, s_list *new);
+
+
 #endif
