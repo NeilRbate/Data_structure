@@ -10,3 +10,4 @@ Implemented data structure:
 -Insert
 -Golast
 -Size
+-
