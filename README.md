@@ -1,5 +1,6 @@
 # Data_structure
 This is a repo with some data structure in C
+I use it from a library for some projects, feel free to use it to.
 
 For the moment they are:
 
@@ -10,6 +11,7 @@ For the moment they are:
 -Insert
 -Golast
 -Size
+-Free (Need some modification for non-alloc *data)
 
 *Doubly linked list and this utilities:
 -Create
