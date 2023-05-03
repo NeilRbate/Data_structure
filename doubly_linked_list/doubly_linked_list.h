@@ -1,5 +1,5 @@
-#ifndef SIMPLY_LINKED_LIST
-#define SIMPLY_LINKED_LIST
+#ifndef DOUBLY_LINKED_LIST
+#define DOUBLY_LINKED_LIST
 
 //--For malloc--//
 #include <stdlib.h>
@@ -7,12 +7,13 @@
 #include <stdio.h>
 
 //--List struct--//
-typedef struct	list {
+typedef struct	dlist {
 
 	void		*data;
-	struct list	*next;
+	struct dlist	*next;
+	struct dlist	*prev;
 
-}		s_list;
+}		d_list;
 
 //--Create func--//
 /*
@@ -21,31 +22,28 @@ typedef struct	list {
  * -Return NULL and perror if they are some issues
  * -Return ptr to the element was created is everything is ok
 */
-s_list	*
-s_list_create(void *data);
+d_list	*
+d_list_create(void *data);
 
 //--Addlast func--//
 /*
- * Dependencies : s_list_golast, s_list_create, stdlib, stdio
+ * Dependencies : d_list_golast, d_list_create, stdlib, stdio
  * Use for add a node at the end of list
  * Return NULL and print on stderr if they are some issues
  * Return ptr to the last element if everything is ok
 */
-s_list	*
-s_list_addlast(s_list *current, void *data);
+d_list	*
+d_list_addlast(d_list *current, void *data);
 
 //--Addfront func--//
 /*
- * Take care, this function add and elem before the (*list elem),
- * if its not the first elem, you can definitly lost the data before
- * this element.
- * Dependencies : stdio, stdlib, stderr, s_list_create
+ * Dependencies : stdio, stdlib, stderr, d_list_create, d_list_gofirst
  * Use for add and element at the top of the list
  * Return NULL and print on stderr if they are an issues
  * Return ptr to the new first element of the list if its ok
 */
-s_list	*
-s_list_addfront(s_list *current, void *data);
+d_list	*
+d_list_addfront(d_list *current, void *data);
 
 //--Golast func--//
 /*
@@ -54,8 +52,22 @@ s_list_addfront(s_list *current, void *data);
  * Return NULL and print on stderr if they are some issues
  * Return ptr on the last element if everything is ok
 */
-s_list	*
-s_list_golast(s_list *current);
+d_list	*
+d_list_golast(d_list *current);
+
+//--Gofirst func--//
+/*
+ * Dependencies : stdio, stderr
+ * Use to go to the first element of the list and return them
+ * Return NULL and printf on stderr if they are some issues
+ * Return ptr to the first element if everything is ok
+*/
+d_list	*
+d_list_gofirst(d_list *current);
+
+
+
+//*************** TO DO ***************//
 
 //--Size func--//
 /*
@@ -65,8 +77,8 @@ s_list_golast(s_list *current);
  * Return -1 and printf on stderr if they are an issue
  * Return the size if everthing is ok
 */
-int	
-s_list_size(s_list *current);
+//int	
+//s_list_size(s_list *current);
 
 //--Insert func--//
 /*
@@ -75,8 +87,8 @@ s_list_size(s_list *current);
  * Return NULL if the current or new node is NULL
  * Return ptr to the current node if everything is ok
 */
-s_list	*
-s_list_insert(s_list *current, s_list *new);
+//s_list	*
+//s_list_insert(s_list *current, s_list *new);
 
 //--Free func--//
 /*
@@ -85,8 +97,7 @@ s_list_insert(s_list *current, s_list *new);
  * set them to NULL
  * Take care of the value can be before when you free
 */
-void
-s_list_free(s_list *current);
-
+//void
+//s_list_free(s_list *current);
 
 #endif

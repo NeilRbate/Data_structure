@@ -10,4 +10,11 @@ Implemented data structure:
 -Insert
 -Golast
 -Size
--
+
+*Doubly linked list and this utilities:
+-Create
+-Addlast
+-Addfront
+-Golast
+-Gofront
+and other arrive

@@ -1,7 +1,8 @@
 #include "simply_linked_list.h"
 
 //--Create func--//
-s_list	*s_list_create(void *data) {
+s_list	*
+s_list_create(void *data) {
 	
 	s_list	*list;
 	if (!(list = malloc(sizeof(*list)))) {
@@ -16,7 +17,8 @@ s_list	*s_list_create(void *data) {
 }	
 
 //--Addlast func--//
-s_list	*s_list_addlast(s_list *current, void *data) {
+s_list	*
+s_list_addlast(s_list *current, void *data) {
 
 	s_list	*next, *last;
 
@@ -33,7 +35,8 @@ s_list	*s_list_addlast(s_list *current, void *data) {
 }
 
 //--Addfront func--//
-s_list	*s_list_addfront(s_list *current, void *data) {
+s_list	*
+s_list_addfront(s_list *current, void *data) {
 
 	s_list	*new;
 
@@ -48,7 +51,8 @@ s_list	*s_list_addfront(s_list *current, void *data) {
 }
 
 //--Insert func--//
-s_list	*s_list_insert(s_list *current, s_list *new) {
+s_list	*
+s_list_insert(s_list *current, s_list *new) {
 
 	if (!current || !new) {
 		fprintf(stderr, "error: Null value send to s_list_insert function\n");
@@ -60,7 +64,8 @@ s_list	*s_list_insert(s_list *current, s_list *new) {
 }
 
 //--Golast func--//
-s_list	*s_list_golast(s_list *current) {
+s_list	*
+s_list_golast(s_list *current) {
 
 	if (!current) {
 		fprintf(stderr, "error: NULL value send to s_list_golast function\n");
@@ -72,7 +77,8 @@ s_list	*s_list_golast(s_list *current) {
 }
 
 //--Size func--/
-int	s_list_size(s_list *current) {
+int	
+s_list_size(s_list *current) {
 
 	int	size = 0;
 
@@ -88,4 +94,27 @@ int	s_list_size(s_list *current) {
 			return (size);
 	}
 	return (size);
+}
+
+//--Free func--//
+void	
+s_list_free(s_list *current) {
+
+	s_list	*stock;
+	if (!current) {
+		fprintf(stderr, "error: Null value send to s_list_free function\n");
+		return ;
+	}
+	while (current) {
+		stock = current;
+		current = current->next;
+		if (stock->data) {
+			free(stock->data);
+			stock->data = NULL;
+		}
+		if (stock) {
+			free(stock);
+			stock = NULL;
+		}
+	}
 }
