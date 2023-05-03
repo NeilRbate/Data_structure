@@ -1,5 +1,5 @@
 # Data_structure
-This is a repo with some data structure
+This is a repo with some data structure in C
 
 For the moment they are:
 
