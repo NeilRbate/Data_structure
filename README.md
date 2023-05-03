@@ -1,8 +1,8 @@
 # Data_structure
-This is my own data structure, in C, I use them for my personnal project.
-Work in progress.
+This is a repo with some data structure
 
-Implemented data structure:
+For the moment they are:
+
 *Simply linked list and this utilities:
 -Create
 -Addlast
@@ -17,4 +17,5 @@ Implemented data structure:
 -Addfront
 -Golast
 -Gofront
-and other arrive
+
+Other data_structure and utilities arrive soon, feel free to share, fork or PL if you want to contribute !
