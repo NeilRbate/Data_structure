@@ -80,7 +80,7 @@ s_list_golast(s_list *current) {
 int	
 s_list_size(s_list *current) {
 
-	int	size = 0;
+	int	size = 1;
 
 	if (!current) {
 		fprintf(stderr, "error: NULL value send to s_list_size function\n");

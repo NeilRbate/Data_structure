@@ -1,6 +1,6 @@
 # Data_structure
-This is a repo with some data structure in C
-I use it from a library for some projects, feel free to use it to.
+This is a repo with some data structure in C.
+I use it for some projects, feel free to use to.
 
 For the moment they are:
 
@@ -11,7 +11,7 @@ For the moment they are:
 -Insert
 -Golast
 -Size
--Free (Need some modification for non-alloc *data)
+-Free (Need some modification for non-void *data)
 
 *Doubly linked list and this utilities:
 -Create
@@ -19,5 +19,7 @@ For the moment they are:
 -Addfront
 -Golast
 -Gofront
+-Size
+-Free (Need some modification for non-void *data)
 
 Other data_structure and utilities arrive soon, feel free to share, fork or PL if you want to contribute !

@@ -77,18 +77,20 @@ d_list_gofirst(d_list *current);
  * Return -1 and printf on stderr if they are an issue
  * Return the size if everthing is ok
 */
-//int	
-//s_list_size(s_list *current);
+int	
+d_list_size(d_list *current);
 
 //--Insert func--//
 /*
  * Dependencies : stdio
  * This function insert a new node after the current node
+ * They don't assign non-use pointer on prev/next, take care of
+ * the new node you send to this function
  * Return NULL if the current or new node is NULL
  * Return ptr to the current node if everything is ok
 */
-//s_list	*
-//s_list_insert(s_list *current, s_list *new);
+d_list	*
+d_list_insert(d_list *current, d_list *new);
 
 //--Free func--//
 /*
@@ -97,7 +99,7 @@ d_list_gofirst(d_list *current);
  * set them to NULL
  * Take care of the value can be before when you free
 */
-//void
-//s_list_free(s_list *current);
+void
+d_list_free(d_list *current);
 
 #endif
