@@ -33,6 +33,7 @@ d_list_addlast(d_list *current, void *data) {
 		return (NULL);
 	last->next = new;
 	new->prev = last;
+	new->next = NULL;
 	return (new);
 }
 
@@ -52,6 +53,29 @@ d_list_addfront(d_list *current, void *data) {
 		return (NULL);
 	first->prev = new;
 	new->next = first;
+	return (new);
+}
+
+//--Insert func--//
+d_list	*
+d_list_insert(d_list *current, d_list *new) {
+
+	d_list	*next;
+
+	if (!current || !new) {
+		fprintf(stderr, "error: Null value send to d_list_insert function\n");
+		return (NULL);
+	}
+	next = current->next;
+	if (!next) {
+		current->next = new;
+		new->prev = next;
+		return (new);
+	}
+	next->prev = new;
+	current->next = new;
+	new->prev = current;
+	new->next = next;
 	return (new);
 }
 
@@ -80,3 +104,49 @@ d_list_gofirst(d_list *current) {
 		current = current->prev;
 	return (current);
 }
+
+//--Size func--//
+int
+d_list_size(d_list *current) {
+
+	int	size = 1;
+
+	if (!current) {
+		fprintf(stderr, "error: Null value send to d_list_size function\n");
+		return (-1);
+	}
+	while (current->next) {
+		current = current->next;
+		size++;
+	}
+	return (size);
+}
+
+//--Free func--//
+void
+d_list_free(d_list *current) {
+
+	d_list	*stock;
+
+	if (!current) {
+		fprintf(stderr, "error: Null value send to d_list_free function\n");
+		return ;
+	}
+	while (current->next) {
+		stock = current;
+		current = current->next;
+		if (stock->data) {
+			free(stock->data);
+			stock->data = NULL;
+		}
+		free(stock);
+		stock = NULL;
+	}
+	free(current->data);
+	current->data = NULL;
+	free(current);
+	current = NULL;
+}
+
+
+
