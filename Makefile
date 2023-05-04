@@ -1,7 +1,7 @@
 GCC = gcc
 SRCS = simply_linked_list/simply_linked_list.c \
        doubly_linked_list/doubly_linked_list.c
-HEADER = -I build/data_structure.h
+HEADER = -I /build/data_structure.h
 OBJS = ${SRCS:.c=.o}
 NAME = datastructure.a
 CFLAGS = -Wall -Wextra -Werror
