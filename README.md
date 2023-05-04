@@ -1,6 +1,6 @@
 # Data_structure
-This is a repo with some data structure in C
-I use it from a library for some projects, feel free to use it to.
+This is a repo with some data structure in C.
+I use it for some projects, feel free to use to.
 
 For the moment they are:
 
