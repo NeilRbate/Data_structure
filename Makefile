@@ -1,6 +1,8 @@
 GCC = gcc
 SRCS = simply_linked_list/simply_linked_list.c \
-       doubly_linked_list/doubly_linked_list.c
+       doubly_linked_list/doubly_linked_list.c \
+       binary_tree/binary_tree.c \
+
 HEADER = -I /build/data_structure.h
 OBJS = ${SRCS:.c=.o}
 NAME = datastructure.a
