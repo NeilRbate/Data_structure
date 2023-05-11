@@ -67,8 +67,6 @@ d_list_gofirst(d_list *current);
 
 
 
-//*************** TO DO ***************//
-
 //--Size func--//
 /*
  * Dependencies : stdio
